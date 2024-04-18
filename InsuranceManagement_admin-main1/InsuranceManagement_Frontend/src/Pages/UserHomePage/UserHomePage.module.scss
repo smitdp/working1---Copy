@@ -1,0 +1,57 @@
+@import "../../assets/variables.scss";
+
+
+
+.main-grid-container {
+  display: grid;
+  grid-template-columns: 250px auto;
+  padding: $padding;
+  gap: 1rem;
+  width: 100%;
+  height: 100dvh;
+  background: $light1;
+  
+  
+  
+  .side-nav-container {
+    background: $white;
+    height: 100%;
+    border-radius: $radius1;
+    padding: 1rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    
+    
+  }
+
+  
+  .main-view-container {
+    // background: $light1;
+    height: 100%;
+    overflow-y: auto; 
+    box-sizing: border-box; 
+    padding:0 $padding $padding $padding;
+    border-radius: $radius1;
+    border-radius: $radius1;
+    // box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+
+  @media(max-width: 900px) {
+    grid-template-columns: 60px auto;
+    padding: 0.2rem;
+    gap: 0.2rem;
+    .side-nav-container {
+      padding: 0.2rem;
+    }
+
+    .main-view-container {
+      padding: 0.2rem;
+    }
+  }
+}
+
+
+
+
+

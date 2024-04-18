@@ -1,0 +1,24 @@
+@import "../../assets/variables.scss";
+
+
+.main-container {
+    padding: 2rem 0.5rem 1rem 0.5rem;
+    h1 {
+        font-family: 'poppins';
+        color: $dark4;
+        margin-bottom: 3rem;
+
+    }
+
+    td {
+        border-bottom: none;
+    }
+
+    table {
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+}
+.table-row-even {
+    background: rgb(250, 250, 250);
+}
+

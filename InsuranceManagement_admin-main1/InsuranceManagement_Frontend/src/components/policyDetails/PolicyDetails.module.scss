@@ -1,0 +1,194 @@
+@import "../../assets/variables.scss";
+
+$background-color: $light2;
+$small-font-size: 0.8em;
+$bold-font-size: 1.8rem;
+
+.modalOverlay {
+  position: absolute;
+
+  inset: 0;
+  background: rgba(181, 181, 181, 0.305);
+  backdrop-filter: blur(5px);
+
+  display: grid;
+  place-content: center;
+
+  .modalContent {
+    background: white;
+    padding: 2rem;
+    max-width: 400px;
+    min-width: 300px;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    h2 {
+      font-weight: 900;
+      color: $light5;
+      text-align: center;
+    }
+
+    p {
+      font-weight: 800;
+      color: $dark4;
+    }
+
+    select {
+      background: $light1;
+      border: none;
+      padding: 1rem;
+      width: 100%;
+      color: $light5;
+      font-weight: 800;
+      border-radius: 0.5rem;
+
+      &:active {
+        border: none;
+        outline: none;
+      }
+      &:focus {
+        border: none;
+        outline: none;
+      }
+    }
+    .button-container {
+      display: flex;
+      gap: 1rem;
+      button {
+        padding: 1rem;
+        background: $mainColor;
+        color: $white;
+        border: none;
+        border-radius: 0.5rem;
+        font-weight: 800;
+        cursor: pointer;
+        box-shadow: rgba(50, 50, 93, 0.3) 0px 10px 10px -5px,
+          rgba(0, 0, 0, 0.2) 0px 20px 20px -10px;
+        transition: all 0.2s ease-in-out;
+
+        &:nth-child(1) {
+          flex: 4;
+        }
+        &:nth-child(2) {
+          flex: 1;
+          background: $white;
+          border: 2px solid $mainColor;
+          color: $mainColor;
+        }
+
+        &:hover {
+          transform: scale(1.1);
+        }
+
+        &:active {
+          transform: scale(0.8);
+        }
+      }
+    }
+  }
+}
+
+.main-container {
+  display: grid;
+  place-content: center;
+  min-height: 100%;
+  width: 100%;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); // Adjust column width as needed
+
+  gap: 1rem;
+
+  p {
+    background: white;
+    padding: 3rem;
+    border-radius: 0.5rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    color: $light5;
+
+    &:last-child {
+      background: linear-gradient(135deg, rgb(250, 124, 187), rgb(241, 70, 88));
+      color: $light1;
+      text-align: center;
+      span {
+        color: rgb(255, 196, 0);
+        color:$white;
+      }
+    }
+    &:first-child {
+      span {
+        color: $mainColor;
+      }
+    }
+    @media (min-width: 1000px) {
+      &:nth-child(3) {
+        grid-column: span 2;
+      }
+      &:nth-child(4) {
+        grid-column: span 3;
+      }
+
+      &:nth-child(6),
+      &:nth-child(7) {
+        grid-column: span 2;
+      }
+    }
+  }
+
+  @media (max-width: 1000px) {
+    grid-template-columns: repeat(2, 1fr); // Adjust column width as needed
+
+    p {
+      padding: 1rem;
+    }
+  }
+  @media (max-width: 700px) {
+    grid-template-columns: repeat(1, 1fr); // Adjust column width as needed
+
+    p {
+      padding: 1rem;
+    }
+  }
+}
+
+.small {
+  font-size: $small-font-size;
+
+}
+
+.bold {
+  font-size: $bold-font-size;
+  font-weight: 900;
+  font-family: "poppins";
+  color: $dark4;
+
+  @media (max-width: 700px) {
+    font-size: 1rem;
+  }
+}
+
+.buy-button {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 1rem;
+  background: $mainColor;
+  color: $white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.3) 0px 10px 10px -5px,
+    rgba(0, 0, 0, 0.2) 0px 20px 20px -10px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.01);
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}

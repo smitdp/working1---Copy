@@ -1,0 +1,87 @@
+@import "../../assets/variables.scss";
+.about-us {
+    margin-top: 4rem;
+   
+}
+.title {
+    h1{
+    font-family: "poppins";
+    font-weight: 900;
+    color:$light5;
+    font-size: 2rem;
+    text-align: center;
+}
+}
+
+.aboutcards-container {
+    margin-top: 1rem;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    justify-content: stretch;
+
+    .card {
+        text-align: center;
+        flex: 1;
+        padding: 3rem;
+        display: grid;
+        place-content: center;
+        border-radius: 1rem;
+        box-shadow: rgba(50, 50, 93, 0.1) 0px 30px 50px -30px, rgba(0, 0, 0, 0.1) 0px 50px 40px -50px;
+        
+        &:nth-child(1){
+            background: linear-gradient(135deg, rgb(144, 85, 255), rgb(19, 226, 218));
+        }
+        &:nth-child(2){
+            background: linear-gradient(135deg, rgb(250, 124, 187), rgb(241, 70, 88));
+        }
+        h2{
+            font-family: "poppins";
+            font-weight: 700;
+            color:$white;
+            font-size: 2rem;
+            text-align: center;
+        }
+        h3 {
+            margin:20px;
+            font-weight: 500;
+            font-family: "poppins";
+            color: $light3;
+        }
+    }
+}
+
+.location {
+    text-align: center;
+    flex: 1;
+    padding: 3rem;
+    
+    justify-content: center; /* Center maps horizontally */
+    border-radius: 1rem;
+
+    
+}
+
+h2 {
+    font-family: "poppins";
+    font-weight: 800;
+    color: $light5;
+    font-size: 2rem;
+    text-align: center;
+}
+.map-container{
+    display: flex;
+    flex-wrap:wrap;
+    width: 100%;
+    gap: 2rem;
+    height: 400px;
+    .map {
+       flex:1;
+       iframe {
+        width: 100%;
+        height: 100%;
+      
+       }
+    }
+}

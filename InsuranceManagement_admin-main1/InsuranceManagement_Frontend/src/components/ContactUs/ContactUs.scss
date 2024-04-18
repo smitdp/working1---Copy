@@ -1,0 +1,67 @@
+@import "../../assets/variables.scss";
+.contact-us {
+    margin-top: 4rem;
+   
+}
+.contact{
+    h1{
+    font-family: "poppins";
+    font-weight: 900;
+    color:$light5;
+    font-size: 2rem;
+    text-align: center;
+}
+}
+
+.email, .phone, .address{
+    display:flex;
+    align-items:center;
+}
+.contactcards-container {
+    margin-top: 1rem;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    justify-content: stretch;
+
+    .card {
+        text-align: center;
+        width:100%;
+        flex: 1;
+        padding: 3rem;
+        display: grid;
+        place-content: center;
+        border-radius: 1rem;
+        box-shadow: rgba(50, 50, 93, 0.1) 0px 30px 50px -30px, rgba(0, 0, 0, 0.1) 0px 50px 40px -50px;
+        
+        &:nth-child(1){
+            background: linear-gradient(135deg, rgb(144, 85, 255), rgb(19, 226, 218));
+        }
+        &:nth-child(2){
+            background: linear-gradient(135deg, rgb(250, 124, 187), rgb(241, 70, 88));
+        }
+        h2{
+            font-family: "poppins";
+            font-weight: 700;
+            color:$white;
+            font-size: 2rem;
+            text-align: center;
+        }
+        h3 {
+            margin:20px;
+            font-weight: 500;
+            font-family: "poppins";
+            color: $light3;
+        }
+    }
+}
+
+h2 {
+    font-family: "poppins";
+    font-weight: 800;
+    color: $light5;
+    font-size: 2rem;
+    text-align: center;
+}
